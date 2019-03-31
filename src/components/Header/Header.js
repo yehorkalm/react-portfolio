@@ -5,6 +5,14 @@ import Typist from 'react-typist';
 import './Header.css';
 
 export default class Header extends Component {
+  constructor() {
+    super();
+    this.state = {
+      typistIndex: 0,
+      firstShowDelay: 6000,
+      firstShowOffset: 1,
+    };
+  }
   componentDidMount() {
     /*----------------------------------------------------*/
     /*	Make sure that #header-background-image height is
@@ -13,7 +21,9 @@ export default class Header extends Component {
 
     $('header').css({ height: $(window).height() });
     $(window).on('resize', () => {
-      $('header').css({ height: $(window).height() });
+      $('header').css({
+        height: $(window).height() > 768 ? $(window).height() : 768,
+      });
       $('body').css({ width: $(window).width() });
     });
 
@@ -43,9 +53,21 @@ export default class Header extends Component {
       show: true,
       blink: true,
       element: '|',
-      hideWhenDone: false,
-      hideWhenDoneDelay: 1000,
+      hideWhenDone: true,
+      hideWhenDoneDelay: 0,
     };
+    const noCursor = {
+      show: false,
+      blink: false,
+      element: '',
+    };
+    const actionWords = [
+      { text: 'A CREATIVE', delete: 10, id: 'acCreat' },
+      { text: 'AN IMPROVING', delete: 12, id: 'acImpr' },
+      { text: 'A PASSIONATE', delete: 12, id: 'acPass' },
+      { text: 'AN OPEN-MINDED', delete: 14, id: 'acOpen' },
+      { text: 'A DATA-DRIVEN', delete: 13, id: 'acData' },
+    ];
     return (
       // <React.Fragment>
       <header id='home'>
@@ -91,22 +113,55 @@ export default class Header extends Component {
         </nav>
 
         <div className='row banner'>
-          <div className='banner-text'>
-            <h1 className='responsive-headline'>
-              I am
-              <Typist cursor={cursor}>
-                Yehor Kalmykov
-                <Typist.Backspace count={14} delay={1200} />
-                a Full-Stack Developer
-                <Typist.Backspace count={22} delay={1200} />a Kick-Ass Dude
-              </Typist>
-            </h1>
+          <div className='banner-text responsive-headline'>
+            <Typist cursor={cursor}>
+              <Typist.Delay ms={2000} />
+              <span id='hello'>HELLO</span>
+              <Typist.Delay ms={1500} />
+              <p id='yehor'>I'M YEHOR</p>
+            </Typist>
 
-            <h3 style={{ color: '#fff', fontFamily: 'sans-serif ' }}>
-              The website is under construction!
-            </h3>
+            <Typist
+              cursor={noCursor}
+              key={this.state.typistIndex}
+              onTypingDone={() => {
+                this.setState(state => ({
+                  typistIndex: state.typistIndex + 1,
+                  firstShowDelay: 0,
+                  firstShowOffset: 0,
+                }));
+              }}
+            >
+              <span style={{ fontSize: 0 }}>.</span>
+              {actionWords.map(word => [
+                word.text === 'A CREATIVE' ? (
+                  <Typist.Delay ms={this.state.firstShowDelay} />
+                ) : (
+                  ''
+                ),
+                <span id={word.id} className='whoami'>
+                  {word.text}
+                </span>,
+                <Typist.Backspace count={word.delete} delay={3000} />,
+              ])}
+            </Typist>
+            <Typist cursor={noCursor}>
+              <Typist.Delay ms={7000} />
+              <p id='webdev'> WEB DEVELOPER</p>
+            </Typist>
 
+            <div id='slide'>
+              <p id='where'>I STAND ON A SWEET SPOT WHERE</p>
+              <p id='creativity'>CREATIVITY</p>
+              <span id='and'>AND </span>
+              <span id='code'>CODE</span>
+              <p id='meet'>INTERSECT</p>
+              <span className='f6 black'>
+                The website is under construction!
+              </span>
+            </div>
             <hr />
+
             <ul className='social'>
               <li>
                 <a href='https://www.linkedin.com/in/yehorkalm/' target='blank'>

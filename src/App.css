@@ -5,3 +5,23 @@
 body {
   background: #0f0f0f;
 }
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url(./shared/fonts/ProximaNovaReg.otf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url(./shared/fonts/ProximaNovaBold.otf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url(./shared/fonts/ProximaNovaLight.otf);
+  font-weight: 200;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url(./shared/fonts/ProximaNovaBlack.otf);
+  font-weight: 800;
+}
