@@ -5,7 +5,8 @@ header {
   width: 100%;
   /* background: #161415 url('../../shared/img/header-background.jpeg') no-repeat
     top center; */
-  background: linear-gradient(to right, rgb(246, 246, 248), rgb(227, 227, 227));
+  /* background: linear-gradient(to right, rgb(246, 246, 248), rgb(227, 227, 227)); */
+  background: rgb(214, 215, 212);
   background-size: cover !important;
   -webkit-background-size: cover !important;
   text-align: center;
@@ -43,59 +44,70 @@ header .banner-text {
 header .banner-text #hello {
   font-size: 160px;
   font-weight: 600;
-  color: #c60021;
+  color: rgb(154, 27, 40);
 }
 
+header .banner-text #im {
+  font-size: 97px;
+  margin: 0 auto 0;
+  /* color: rgb(154, 27, 40); */
+  color: rgb(45, 45, 72);
+}
 header .banner-text #yehor {
   font-size: 97px;
   margin: 0 auto 0;
-  color: #000000;
+  font-weight: 600;
+  color: rgb(214, 135, 43);
 }
 header .banner-text .whoami {
   margin: -10px auto -10px;
-  color: #ff3254;
+  color: rgb(11, 72, 88);
 }
 header .banner-text #webdev {
   margin: -10px auto -10px;
   font-size: 77px;
   font-weight: 400;
-  color: #ff3254;
+  color: rgb(154, 27, 40);
   letter-spacing: -7px;
 }
 header .banner-text #where {
   margin: -10px auto -30px;
   font-size: 30px;
   font-weight: 200;
-  color: #5132ff;
+  color: rgb(45, 45, 72);
   letter-spacing: 0px;
 }
 header .banner-text #creativity {
   margin: -10px auto -10px;
   font-size: 90px;
   font-weight: 600;
-  color: #5132ffe8;
+  color: rgb(214, 135, 43);
   letter-spacing: -2px;
 }
 header .banner-text #and {
   margin: -10px auto -10px;
   font-size: 90px;
   font-weight: 400;
-  color: #3613fa;
+  color: rgb(45, 45, 72);
   letter-spacing: 1px;
 }
 header .banner-text #code {
   margin: -10px auto -10px;
   font-size: 90px;
   font-weight: 600;
-  color: #5132ffe8;
+  color: rgb(11, 72, 88);
   letter-spacing: 3px;
 }
 header .banner-text #meet {
   margin: -10px auto -10px;
   font-size: 87px;
   font-weight: 800;
-  color: #5132ff;
   letter-spacing: 1px;
+
+  background: linear-gradient(to right, rgb(214, 135, 43), rgb(11, 72, 88));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 #acCreat {
@@ -170,7 +182,7 @@ header .banner-text hr {
 
 /* header social links */
 header .social {
-  margin: 24px 0;
+  margin: 0;
   padding: 0;
   font-size: 30px;
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.8);
@@ -180,11 +192,26 @@ header .social li {
   margin: 0 15px;
   padding: 0;
 }
-header .social li a {
+
+header .social li i {
   color: #fff;
 }
-header .social li a:hover {
-  color: #11abb0;
+header .social li i:hover {
+  color: rgb(43, 122, 74);
+  font-size: 45px;
+  animation: roll 0.5s;
+  transition: all;
+}
+
+@keyframes roll {
+  0% {
+    color: #fff;
+    transform: rotate(0);
+  }
+  100% {
+    color: rgb(43, 122, 74);
+    transform: rotate(360deg);
+  }
 }
 
 /* scrolldown link */

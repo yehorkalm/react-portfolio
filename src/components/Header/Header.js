@@ -113,13 +113,16 @@ export default class Header extends Component {
         </nav>
 
         <div className='row banner'>
-          <div className='banner-text responsive-headline'>
+          <div className='banner-text '>
             <Typist cursor={cursor}>
               <Typist.Delay ms={2000} />
               <span id='hello'>HELLO</span>
               <Typist.Delay ms={1500} />
-              <p id='yehor'>I'M YEHOR</p>
+              <br className='mt0 mb0' />
+              <span id='im'>I'M </span>
+              <span id='yehor'>YEHOR</span>
             </Typist>
+            <br className='mt0 mb0' />
 
             <Typist
               cursor={noCursor}
@@ -147,7 +150,10 @@ export default class Header extends Component {
             </Typist>
             <Typist cursor={noCursor}>
               <Typist.Delay ms={7000} />
-              <p id='webdev'> WEB DEVELOPER</p>
+              <p id='webdev'>
+                {/* <span style={{ color: 'rgb(214, 135, 43)' }}>WEB </span> */}
+                WEB DEVELOPER
+              </p>
             </Typist>
 
             <div id='slide'>
@@ -156,24 +162,26 @@ export default class Header extends Component {
               <span id='and'>AND </span>
               <span id='code'>CODE</span>
               <p id='meet'>INTERSECT</p>
-              <span className='f6 black'>
+              <span className='f6 black mb0 mt0'>
                 The website is under construction!
               </span>
+              <ul className='social'>
+                <li>
+                  <a
+                    href='https://www.linkedin.com/in/yehorkalm/'
+                    target='blank'
+                  >
+                    <i className='fab fa-linkedin-in' />
+                  </a>
+                </li>
+                <li>
+                  <a href='https://github.com/yehorkalm/' target='blank'>
+                    <i className='fab fa-github' />
+                  </a>
+                </li>
+              </ul>
             </div>
             <hr />
-
-            <ul className='social'>
-              <li>
-                <a href='https://www.linkedin.com/in/yehorkalm/' target='blank'>
-                  <i className='fab fa-linkedin-in' />
-                </a>
-              </li>
-              <li>
-                <a href='https://github.com/yehorkalm/'>
-                  <i className='fab fa-github' />
-                </a>
-              </li>
-            </ul>
           </div>
         </div>
 
