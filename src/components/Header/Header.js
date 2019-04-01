@@ -19,7 +19,9 @@ export default class Header extends Component {
     /* equal to the browser height.
     ------------------------------------------------------ */
 
-    $('header').css({ height: $(window).height() });
+    $('header').css({
+      height: $(window).height() > 925 ? $(window).height() : 925,
+    });
     $(window).on('resize', () => {
       $('header').css({
         height: $(window).height() > 925 ? $(window).height() : 925,
