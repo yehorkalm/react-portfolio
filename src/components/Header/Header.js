@@ -22,7 +22,7 @@ export default class Header extends Component {
     $('header').css({ height: $(window).height() });
     $(window).on('resize', () => {
       $('header').css({
-        height: $(window).height() > 768 ? $(window).height() : 768,
+        height: $(window).height() > 925 ? $(window).height() : 925,
       });
       $('body').css({ width: $(window).width() });
     });
@@ -49,13 +49,13 @@ export default class Header extends Component {
   }
 
   render() {
-    const cursor = {
-      show: true,
-      blink: true,
-      element: '|',
-      hideWhenDone: true,
-      hideWhenDoneDelay: 0,
-    };
+    // const cursor = {
+    //   show: true,
+    //   blink: true,
+    //   element: '|',
+    //   hideWhenDone: true,
+    //   hideWhenDoneDelay: 0,
+    // };
     const noCursor = {
       show: false,
       blink: false,
@@ -114,15 +114,15 @@ export default class Header extends Component {
 
         <div className='row banner'>
           <div className='banner-text '>
-            <Typist cursor={cursor}>
+            <Typist cursor={noCursor}>
               <Typist.Delay ms={2000} />
               <span id='hello'>HELLO</span>
               <Typist.Delay ms={1500} />
-              <br className='mt0 mb0' />
-              <span id='im'>I'M </span>
-              <span id='yehor'>YEHOR</span>
+              <p id='yehor'>
+                <span id='im'>I'M </span>
+                YEHOR
+              </p>
             </Typist>
-            <br className='mt0 mb0' />
 
             <Typist
               cursor={noCursor}
@@ -157,12 +157,14 @@ export default class Header extends Component {
             </Typist>
 
             <div id='slide'>
-              <p id='where'>I STAND ON A SWEET SPOT WHERE</p>
+              <p id='where'> I STAND ON A SWEET SPOT WHERE</p>
               <p id='creativity'>CREATIVITY</p>
               <span id='and'>AND </span>
               <span id='code'>CODE</span>
-              <p id='meet'>INTERSECT</p>
-              <span className='f6 black mb0 mt0'>
+              <div id='container'>
+                <p id='meet'>INTERSECT</p>
+              </div>
+              <span className='f6 black mb0 mt0' id='construction'>
                 The website is under construction!
               </span>
               <ul className='social'>
@@ -181,7 +183,6 @@ export default class Header extends Component {
                 </li>
               </ul>
             </div>
-            <hr />
           </div>
         </div>
 

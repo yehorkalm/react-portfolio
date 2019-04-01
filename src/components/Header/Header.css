@@ -25,7 +25,7 @@ header .banner {
   /* vertical-align: middle; */
   margin: 0 auto;
   width: 85%;
-  padding-bottom: 30px;
+  /* padding-bottom: 30px; */
   text-align: center;
 }
 
@@ -35,10 +35,9 @@ header .banner-text {
   font-weight: 400;
   /* font: 80px/1.1em 'opensans-bold', sans-serif; */
   color: rgb(6, 255, 213);
-  letter-spacing: -2px;
-  margin: 15vh auto 0;
   /* text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.8); */
   letter-spacing: 2px;
+  margin: 15vh auto 0;
 }
 
 header .banner-text #hello {
@@ -60,12 +59,11 @@ header .banner-text #yehor {
   color: rgb(214, 135, 43);
 }
 header .banner-text .whoami {
-  margin: -10px auto -10px;
   color: rgb(11, 72, 88);
 }
 header .banner-text #webdev {
-  margin: -10px auto -10px;
-  font-size: 77px;
+  margin: -15px auto -10px;
+  font-size: 75px;
   font-weight: 400;
   color: rgb(154, 27, 40);
   letter-spacing: -7px;
@@ -103,11 +101,15 @@ header .banner-text #meet {
   font-size: 87px;
   font-weight: 800;
   letter-spacing: 1px;
-
   background: linear-gradient(to right, rgb(214, 135, 43), rgb(11, 72, 88));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+header .banner-text #container {
+  width: fit-content;
+  margin: auto;
 }
 
 #acCreat {
@@ -137,6 +139,10 @@ header .banner-text #meet {
   animation: slide-top 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 8.5s both;
 }
 
+header .banner-text #construction {
+  letter-spacing: 5px;
+}
+
 @-webkit-keyframes slide-top {
   0% {
     -webkit-transform: translateY(-100px);
@@ -160,24 +166,6 @@ header .banner-text #meet {
     transform: translateY(0);
     opacity: 100%;
   }
-}
-
-header .banner-text h3 {
-  font: 18px/1.9em 'librebaskerville-regular', serif;
-  color: #a8a8a8;
-  margin: 0 auto;
-  width: 70%;
-  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
-}
-header .banner-text h3 span,
-header .banner-text h3 a {
-  color: #fff;
-}
-header .banner-text hr {
-  width: 60%;
-  margin: 18px auto 24px auto;
-  border-color: #2f2d2e;
-  border-color: rgba(150, 150, 150, 0.1);
 }
 
 /* header social links */
