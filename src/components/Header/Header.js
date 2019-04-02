@@ -87,13 +87,13 @@ export default class Header extends Component {
               </a>
             </li>
             <li>
-              <a className='smoothscroll' href='#about'>
-                About
+              <a className='smoothscroll' href='#resume'>
+                Resume
               </a>
             </li>
             <li>
-              <a className='smoothscroll' href='#resume'>
-                Resume
+              <a className='smoothscroll' href='#about'>
+                About
               </a>
             </li>
             <li>
@@ -113,7 +113,6 @@ export default class Header extends Component {
             </li>
           </ul>
         </nav>
-
         <div className='row banner'>
           <div className='banner-text '>
             <Typist cursor={noCursor}>

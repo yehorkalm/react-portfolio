@@ -5,6 +5,10 @@
 body {
   background: #0f0f0f;
 }
+.noscroll {
+  overflow: hidden;
+}
+
 @font-face {
   font-family: 'Proxima Nova';
   src: url(./shared/fonts/ProximaNovaReg.otf);

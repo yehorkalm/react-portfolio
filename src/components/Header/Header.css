@@ -48,6 +48,7 @@ header .banner-text #hello {
 
 header .banner-text #im {
   font-size: 97px;
+  font-weight: 200;
   margin: 0 auto 0;
   /* color: rgb(154, 27, 40); */
   color: rgb(45, 45, 72);
@@ -316,4 +317,8 @@ ul#nav li.current a {
   100% {
     opacity: 1;
   }
+}
+
+#resume {
+  color: white;
 }
