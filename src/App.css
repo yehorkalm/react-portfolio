@@ -3,7 +3,8 @@
 }
 
 body {
-  background: #0f0f0f;
+  /* background: #242424; */
+  background: rgb(214, 215, 212);
 }
 .noscroll {
   overflow: hidden;

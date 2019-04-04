@@ -1,0 +1,26 @@
+h1 {
+  width: 100%;
+  font: 80px/1.1em 'Proxima Nova', sans-serif;
+  font-weight: 400;
+  /* font: 80px/1.1em 'opensans-bold', sans-serif; */
+  color: rgb(6, 255, 213);
+  /* text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.8); */
+  letter-spacing: 2px;
+  margin: 15vh auto 0;
+  font-size: 160px;
+  font-weight: 600;
+  color: rgb(154, 27, 40);
+}
+#photoDiv {
+  /* margin: 40px 50px; */
+  width: 80%;
+  justify-content: center;
+}
+#photo {
+  border-radius: 50%;
+}
+.container {
+  width: 75%;
+  margin: auto;
+  display: flex;
+}

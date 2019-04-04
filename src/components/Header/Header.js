@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
-import $ from 'jquery';
+import ReactDOM from 'react-dom';
 import Typist from 'react-typist';
 
 import './Header.css';
 
 export default class Header extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       typistIndex: 0,
       firstShowDelay: 6000,
       firstShowOffset: 1,
+      height: '',
     };
   }
   componentDidMount() {
@@ -18,33 +19,42 @@ export default class Header extends Component {
     /*	Make sure that #header-background-image height is
     /* equal to the browser height.
     ------------------------------------------------------ */
-
-    $('header').css({
-      height: $(window).height() > 925 ? $(window).height() : 925,
+    let el = ReactDOM.findDOMNode(this);
+    this.setState({
+      height: window.innerHeight > 850 ? window.innerHeight + 'px' : '850px',
     });
-    $(window).on('resize', () => {
-      $('header').css({
-        height: $(window).height() > 925 ? $(window).height() : 925,
+    console.log(el.clientHeight);
+
+    window.addEventListener('resize', () => {
+      this.setState({
+        height: window.innerHeight > 850 ? window.innerHeight + 'px' : '850px',
       });
-      $('body').css({ width: $(window).width() });
     });
 
     /*----------------------------------------------------*/
     /*	Fade In/Out Primary Navigation
     ------------------------------------------------------*/
 
-    $(window).on('scroll', () => {
-      const h = $('header').height();
-      const y = $(window).scrollTop();
-      const nav = $('#nav-wrap');
+    window.addEventListener('scroll', () => {
+      const h = document.getElementById('home').offsetHeight;
+      const y = window.scrollY;
+      const nav = document.getElementById('nav-wrap');
 
-      if (y > h * 0.2 && y < h && $(window).outerWidth() > 768) {
-        nav.fadeOut('fast');
+      if (y > h * 0.2 && y < h && window.outerWidth > 768) {
+        nav.classList.add('animated');
+        nav.classList.add('fadeOut');
       } else {
         if (y < h * 0.2) {
-          nav.removeClass('opaque').fadeIn('fast');
+          nav.classList.remove('opaque');
+          nav.classList.remove('fadeOut');
+          nav.classList.remove('animated');
+
+          // nav.removeClass('opaque').fadeIn('fast');
         } else {
-          nav.addClass('opaque').fadeIn('fast');
+          nav.classList.add('opaque');
+          nav.classList.remove('animated');
+          nav.classList.remove('fadeOut');
+          // nav.addClass('opaque').fadeIn('fast');
         }
       }
     });
@@ -72,7 +82,7 @@ export default class Header extends Component {
     ];
     return (
       // <React.Fragment>
-      <header id='home'>
+      <header id='home' style={{ height: this.state.height }}>
         <nav id='nav-wrap' className=''>
           <a className='mobile-btn' href='#nav-wrap' title='Show navigation'>
             Show navigation
@@ -82,34 +92,22 @@ export default class Header extends Component {
           </a>
           <ul id='nav' className='nav '>
             <li className='current'>
-              <a className='smoothscroll' href='#home'>
-                Home
-              </a>
+              <span onClick={() => this.props.onNav(0)}>Home</span>
             </li>
             <li>
-              <a className='smoothscroll' href='#resume'>
-                Resume
-              </a>
+              <span onClick={() => this.props.onNav(1)}>Resume</span>
             </li>
             <li>
-              <a className='smoothscroll' href='#about'>
-                About
-              </a>
+              <span onClick={() => this.props.onNav(2)}>About</span>
             </li>
             <li>
-              <a className='smoothscroll' href='#portfolio'>
-                Works
-              </a>
+              <span onClick={() => this.props.onNav(3)}>Works</span>
             </li>
             <li>
-              <a className='smoothscroll' href='#testimonials'>
-                Testimonials
-              </a>
+              <span onClick={() => this.props.onNav(4)}>Testimonials</span>
             </li>
             <li>
-              <a className='smoothscroll' href='#contact'>
-                Contact
-              </a>
+              <span onClick={() => this.props.onNav(5)}>Contact</span>
             </li>
           </ul>
         </nav>
@@ -165,7 +163,7 @@ export default class Header extends Component {
               <div id='container'>
                 <p id='meet'>INTERSECT</p>
               </div>
-              <span className='f6 black mb0 mt0' id='construction'>
+              {/* <span className='f6 black mb0 mt0' id='construction'>
                 The website is under construction!
               </span>
               <ul className='social'>
@@ -182,16 +180,16 @@ export default class Header extends Component {
                     <i className='fab fa-github' />
                   </a>
                 </li>
-              </ul>
+              </ul> */}
             </div>
           </div>
         </div>
 
-        <p className='scrolldown'>
+        {/* <p className='scrolldown'>
           <a className='smoothscroll' href='#about'>
             <i className='icon-down-circle' />
           </a>
-        </p>
+        </p> */}
       </header>
       // </React.Fragment>
     );

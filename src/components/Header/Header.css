@@ -1,12 +1,12 @@
 header {
   position: relative;
-  height: 800px;
-  min-height: 500px;
+  /* height: 850px; */
+  /* min-height: 850px; */
   width: 100%;
   /* background: #161415 url('../../shared/img/header-background.jpeg') no-repeat
     top center; */
   /* background: linear-gradient(to right, rgb(246, 246, 248), rgb(227, 227, 227)); */
-  background: rgb(214, 215, 212);
+  /* background: rgb(214, 215, 212); */
   background-size: cover !important;
   -webkit-background-size: cover !important;
   text-align: center;
@@ -275,9 +275,10 @@ ul#nav li {
 }
 
 /* Links */
-ul#nav li a {
+ul#nav li span {
   /* 8px padding top + 8px padding bottom + 32px line-height = 48px */
-
+  cursor: pointer;
+  width: fit-content;
   display: inline-block;
   padding: 8px 13px;
   line-height: 32px;
@@ -286,10 +287,10 @@ ul#nav li a {
   color: rgb(97, 97, 97);
 }
 
-ul#nav li a:active {
+ul#nav li span:active {
   background-color: transparent !important;
 }
-ul#nav li.current a {
+ul#nav li.current span {
   color: #f06000;
 }
 
