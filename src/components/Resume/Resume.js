@@ -19,7 +19,7 @@ export default class Resume extends Component {
               src={yehorPhoto}
               alt=''
               id='photo'
-              className='animated bounce delay-1s'
+              className='animated rotatefadeIn fast delay-1s'
             />
           </div>
           <div>

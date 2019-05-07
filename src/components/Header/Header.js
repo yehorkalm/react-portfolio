@@ -30,34 +30,6 @@ export default class Header extends Component {
         height: window.innerHeight > 850 ? window.innerHeight + 'px' : '850px',
       });
     });
-
-    /*----------------------------------------------------*/
-    /*	Fade In/Out Primary Navigation
-    ------------------------------------------------------*/
-
-    window.addEventListener('scroll', () => {
-      const h = document.getElementById('home').offsetHeight;
-      const y = window.scrollY;
-      const nav = document.getElementById('nav-wrap');
-
-      if (y > h * 0.2 && y < h && window.outerWidth > 768) {
-        nav.classList.add('animated');
-        nav.classList.add('fadeOut');
-      } else {
-        if (y < h * 0.2) {
-          nav.classList.remove('opaque');
-          nav.classList.remove('fadeOut');
-          nav.classList.remove('animated');
-
-          // nav.removeClass('opaque').fadeIn('fast');
-        } else {
-          nav.classList.add('opaque');
-          nav.classList.remove('animated');
-          nav.classList.remove('fadeOut');
-          // nav.addClass('opaque').fadeIn('fast');
-        }
-      }
-    });
   }
 
   render() {
@@ -83,34 +55,6 @@ export default class Header extends Component {
     return (
       // <React.Fragment>
       <header id='home' style={{ height: this.state.height }}>
-        <nav id='nav-wrap' className=''>
-          <a className='mobile-btn' href='#nav-wrap' title='Show navigation'>
-            Show navigation
-          </a>
-          <a className='mobile-btn' href='#' title='Hide navigation'>
-            Hide navigation
-          </a>
-          <ul id='nav' className='nav '>
-            <li className='current'>
-              <span onClick={() => this.props.onNav(0)}>Home</span>
-            </li>
-            <li>
-              <span onClick={() => this.props.onNav(1)}>Resume</span>
-            </li>
-            <li>
-              <span onClick={() => this.props.onNav(2)}>About</span>
-            </li>
-            <li>
-              <span onClick={() => this.props.onNav(3)}>Works</span>
-            </li>
-            <li>
-              <span onClick={() => this.props.onNav(4)}>Testimonials</span>
-            </li>
-            <li>
-              <span onClick={() => this.props.onNav(5)}>Contact</span>
-            </li>
-          </ul>
-        </nav>
         <div className='row banner'>
           <div className='banner-text '>
             <Typist cursor={noCursor}>

@@ -1378,6 +1378,12 @@
   animation-name: fadeIn;
 }
 
+.rotatefadeIn {
+  animation-name: fadeIn;
+  animation-name: rotateIn;
+
+}
+
 @-webkit-keyframes fadeInDown {
   from {
     opacity: 0;

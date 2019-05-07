@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import { Element } from 'react-scroll';
 
+import Navbar from './components/Navbar/Navbar';
 import Header from './components/Header/Header';
 import Resume from './components/Resume/Resume';
 import WhenInView from './components/Helper/WhenInView';
@@ -10,7 +12,6 @@ import WhenInView from './components/Helper/WhenInView';
 // import ContactUs from './components/Contact/Contact';
 // import Footer from './components/Footer/Footer';
 
-import 'tachyons';
 import './App.css';
 import './shared/css/media-queries.css';
 import './shared/css/animate.css';
@@ -18,8 +19,6 @@ import './shared/css/animate.css';
 class App extends Component {
   constructor() {
     super();
-    this.headerRef = React.createRef();
-    this.resumeRef = React.createRef(Resume);
     this.state = {
       routes: [this.headerRef, this.resumeRef],
       currentRoute: 0,
@@ -36,11 +35,14 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        <Header ref={this.headerRef} onNav={this.onNavigation} />
+        <Navbar />
 
-        <WhenInView ref={this.resumeRef}>
+        <Element name='home'>
+          <Header ref={this.headerRef} onNav={this.onNavigation} />
+        </Element>
+        <Element name='resume'>
           <Resume />
-        </WhenInView>
+        </Element>
 
         {/* <About />
         <Portfolio />
