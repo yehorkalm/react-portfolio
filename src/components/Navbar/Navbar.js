@@ -68,7 +68,7 @@ export default class Navbar extends Component {
             duration={700}
             className='link'
           >
-            <span>Resume</span>
+            <span>Skills</span>
           </Link>
           <Link
             activeClass='current'
@@ -79,7 +79,7 @@ export default class Navbar extends Component {
             duration={500}
             className='link'
           >
-            <span>About</span>
+            <span>Works</span>
           </Link>
           <Link
             activeClass='current'
@@ -90,7 +90,7 @@ export default class Navbar extends Component {
             duration={500}
             className='link'
           >
-            <span>Works</span>
+            <span>About</span>
           </Link>
           <Link
             activeClass='current'
