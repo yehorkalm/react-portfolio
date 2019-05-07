@@ -4,10 +4,6 @@ import { Link, animateScroll as scroll, scrollSpy, Events } from 'react-scroll';
 import './Navbar.css';
 
 export default class Navbar extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   componentDidMount() {
     Events.scrollEvent.register('begin', function(to, element) {
       console.log('begin', arguments);
@@ -51,12 +47,6 @@ export default class Navbar extends Component {
   render() {
     return (
       <nav id='nav-wrap' className=''>
-        <a className='mobile-btn' href='#nav-wrap' title='Show navigation'>
-          Show navigation
-        </a>
-        <a className='mobile-btn' href='#' title='Hide navigation'>
-          Hide navigation
-        </a>
         <ul id='nav'>
           <Link
             activeClass='current'

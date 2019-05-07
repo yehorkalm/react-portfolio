@@ -184,22 +184,39 @@ header .social li {
 
 header .social li i {
   color: #fff;
+  animation-name: llor;
+  animation-duration: 1s;
+  transition: all;
 }
 header .social li i:hover {
-  color: rgb(43, 122, 74);
-  font-size: 45px;
-  animation: roll 0.5s;
+  color: rgb(11, 72, 88);
+  animation: roll 1s;
   transition: all;
+  font-size: 45px;
 }
 
 @keyframes roll {
   0% {
     color: #fff;
     transform: rotate(0);
+    font-size: 30px;
   }
   100% {
-    color: rgb(43, 122, 74);
+    color: rgb(11, 72, 88);
     transform: rotate(360deg);
+    font-size: 45px;
+  }
+}
+@keyframes llor {
+  0% {
+    color: rgb(11, 72, 88);
+    transform: rotate(360deg);
+    font-size: 45px;
+  }
+  100% {
+    color: #fff;
+    transform: rotate(0);
+    font-size: 30px;
   }
 }
 

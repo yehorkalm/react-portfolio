@@ -107,9 +107,7 @@ export default class Header extends Component {
               <div id='container'>
                 <p id='meet'>INTERSECT</p>
               </div>
-              {/* <span className='f6 black mb0 mt0' id='construction'>
-                The website is under construction!
-              </span>
+              <br />
               <ul className='social'>
                 <li>
                   <a
@@ -124,7 +122,7 @@ export default class Header extends Component {
                     <i className='fab fa-github' />
                   </a>
                 </li>
-              </ul> */}
+              </ul>
             </div>
           </div>
         </div>
