@@ -46,11 +46,16 @@ export default class Skills extends Component {
     ];
 
     return (
-      <div style={{ overflow: 'hidden' }}>
+      <div style={{ overflow: 'hidden', width: '75%', margin: 'auto' }}>
         <br />
         <br />
         <br />
-
+        <div>
+          <h1>
+            Fast Responsive Intiutive Dynamic use flexbox here and make
+            everything more or less same width
+          </h1>
+        </div>
         <div className='flex'>
           <InViewMonitor
             classNameNotInView='hidden'
