@@ -85,7 +85,7 @@ export default class Header extends Component {
                 ) : (
                   ''
                 ),
-                <span id={word.id} className='whoami'>
+                <span id={word.id} className='action-words-carousel'>
                   {word.text}
                 </span>,
                 <Typist.Backspace count={word.delete} delay={3000} />,

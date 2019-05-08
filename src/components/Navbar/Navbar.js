@@ -1,18 +1,10 @@
 import React, { Component } from 'react';
-import { Link, animateScroll as scroll, scrollSpy, Events } from 'react-scroll';
+import { Link } from 'react-scroll';
 
 import './Navbar.css';
 
 export default class Navbar extends Component {
   componentDidMount() {
-    Events.scrollEvent.register('begin', function(to, element) {
-      console.log('begin', arguments);
-    });
-
-    Events.scrollEvent.register('end', function(to, element) {
-      console.log('end', arguments);
-    });
-
     // scrollSpy.update();
 
     /*----------------------------------------------------*/
@@ -61,7 +53,7 @@ export default class Navbar extends Component {
           </Link>
           <Link
             activeClass='current'
-            to='resume'
+            to='skills'
             spy={true}
             smooth='easeInOutQuart'
             offset={-70}

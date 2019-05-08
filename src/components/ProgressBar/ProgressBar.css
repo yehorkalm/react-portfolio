@@ -1,0 +1,43 @@
+@keyframes auto-progress {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 50%;
+  }
+}
+
+.skill-bar-outer {
+  background-color: gray;
+  height: 35px;
+  width: 450px;
+  margin: 7px 7px 7px 0;
+}
+
+.skill-bar-inner {
+  display: block;
+  height: 35px;
+  /* width: 50%; */
+  background-color: #34c2e3;
+  /* animation: 0.7s auto-progress ease-out; */
+}
+.skill-caption-inner {
+  color: red;
+  line-height: 35px;
+}
+
+.skill-caption {
+  height: 35px;
+  width: 75px;
+  background-color: gray;
+  padding: 0 7px 0 7px;
+  margin-top: 7px;
+}
+
+.flex {
+  border: 1px solid green;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}

@@ -4,8 +4,7 @@ import { Element } from 'react-scroll';
 
 import Navbar from './components/Navbar/Navbar';
 import Header from './components/Header/Header';
-import Resume from './components/Resume/Resume';
-import WhenInView from './components/Helper/WhenInView';
+import Skills from './components/Skills/Skills';
 // import About from './components/About/About';
 // import Portfolio from './components/Portfolio/Portfolio';
 // import Testimonials from './components/Testimonials/Testimonials';
@@ -40,8 +39,9 @@ class App extends Component {
         <Element name='home'>
           <Header ref={this.headerRef} onNav={this.onNavigation} />
         </Element>
-        <Element name='resume'>
-          <Resume />
+
+        <Element name='skills'>
+          <Skills />
         </Element>
 
         {/* <About />

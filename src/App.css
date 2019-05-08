@@ -30,3 +30,11 @@ body {
   src: url(./shared/fonts/ProximaNovaBlack.otf);
   font-weight: 800;
 }
+
+.ma {
+  margin: auto;
+}
+
+.hidden {
+  visibility: hidden;
+}

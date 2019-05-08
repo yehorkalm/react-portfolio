@@ -1,0 +1,23 @@
+.skill-container {
+  /* width: 75%; */
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  margin-left: 1vw;
+}
+
+.hexagon {
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+.whoami-container {
+  /* display: flex; */
+  /* flex-direction: column; */
+  border: 1px solid red;
+  margin-left: 13vw;
+}
+
+#yehorPic {
+  /* width: 70%; */
+  height: 250px;
+}
