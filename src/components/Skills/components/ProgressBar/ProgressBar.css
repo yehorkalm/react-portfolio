@@ -1,0 +1,38 @@
+.skill-bar-outer {
+  background: rgb(190, 190, 190);
+  height: 30px;
+  width: 80%;
+  /* width: 450px; */
+  margin: 7px 0 7px 0;
+}
+
+.skill-bar-inner {
+  display: block;
+  height: 30px;
+  /* width: 50%; */
+  background-color: rgb(199, 110, 9);
+  /* animation: 0.7s auto-progress ease-out; */
+}
+
+.skill-caption {
+  height: 30px;
+  width: 15%;
+  /* width: 80px; */
+  background-color: rgb(214, 135, 43);
+  padding: 0 7px 0 7px;
+  margin-top: 7px;
+}
+
+.skill-caption-inner {
+  line-height: 30px;
+}
+
+.skill-bar-percent {
+  width: fit-content;
+  line-height: 30px;
+  /* padding-right: 7px; */
+  background: transparent;
+  position: absolute;
+  right: 25px;
+  /* right: 35px; */
+}

@@ -34,15 +34,15 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        <Navbar />
-
         <Element name='home'>
           <Header ref={this.headerRef} onNav={this.onNavigation} />
         </Element>
+        <Navbar />
 
         <Element name='skills'>
           <Skills />
         </Element>
+        <Skills />
 
         {/* <About />
         <Portfolio />

@@ -3,7 +3,8 @@
 }
 
 body {
-  /* background: #242424; */
+  font-family: 'Proxima Nova', sans-serif;
+  /* background: black; */
   background: rgb(214, 215, 212);
 }
 .noscroll {
@@ -37,4 +38,54 @@ body {
 
 .hidden {
   visibility: hidden;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.label {
+  font-size: 18pt;
+}
+
+.dark-purple {
+  color: rgb(45, 45, 72);
+}
+
+.blue {
+  color: rgb(11, 72, 88);
+}
+.gold {
+  color: rgb(214, 135, 43);
+}
+.dark-red {
+  color: rgb(154, 27, 40);
+}
+.dark-purple-70 {
+  color: rgba(45, 45, 72, 0.85);
+}
+
+.flex-row-center {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  font-size: 25pt;
+  position: relative;
+  color: #444649;
+  position: relative;
+}
+
+.header-bar {
+  margin: 25px 0 75px 0;
+  width: 70px;
+  height: 4px;
+  background: #444649;
 }

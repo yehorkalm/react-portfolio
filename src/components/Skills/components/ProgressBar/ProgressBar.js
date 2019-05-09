@@ -16,9 +16,9 @@ const SkillBar = posed.div({
 
 const ProgressBar = ({ name, value, revealed, id }) => {
   return (
-    <div className='flex'>
+    <div className='flex-row-center'>
       <div className='skill-caption'>
-        <span className='skill-caption-inner'>{name}</span>
+        <span className='skill-caption-inner dark-purple-70 bold'>{name}</span>
       </div>
 
       <div className='skill-bar-outer'>
@@ -29,6 +29,7 @@ const ProgressBar = ({ name, value, revealed, id }) => {
           pose={revealed ? 'visible' : 'hidden'}
         />
       </div>
+      <span className='skill-bar-outer skill-bar-percent'>{value}</span>
     </div>
   );
 };

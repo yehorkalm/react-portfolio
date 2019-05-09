@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import Particles from 'react-particles-js';
 import Typist from 'react-typist';
 
 import './Header.css';
@@ -16,19 +16,10 @@ export default class Header extends Component {
   }
   componentDidMount() {
     /*----------------------------------------------------*/
-    /*	Make sure that #header-background-image height is
-    /* equal to the browser height.
+    /*	Make sure that component's minimum height is equal to the browser height.
     ------------------------------------------------------ */
-    let el = ReactDOM.findDOMNode(this);
     this.setState({
-      height: window.innerHeight > 850 ? window.innerHeight + 'px' : '850px',
-    });
-    console.log(el.clientHeight);
-
-    window.addEventListener('resize', () => {
-      this.setState({
-        height: window.innerHeight > 850 ? window.innerHeight + 'px' : '850px',
-      });
+      height: window.innerHeight,
     });
   }
 
@@ -52,17 +43,32 @@ export default class Header extends Component {
       { text: 'AN OPEN-MINDED', delete: 14, id: 'acOpen' },
       { text: 'A DATA-DRIVEN', delete: 13, id: 'acData' },
     ];
+    const particles = {
+      polygon: {
+        enable: true,
+        type: 'inside',
+        move: {
+          radius: 10,
+        },
+        url: '../../shared/laptop.svg',
+      },
+    };
     return (
       // <React.Fragment>
-      <header id='home' style={{ height: this.state.height }}>
+      <header id='home' style={{ minHeight: this.state.height }}>
+        <Particles params={particles} />
         <div className='row banner'>
           <div className='banner-text '>
             <Typist cursor={noCursor}>
               <Typist.Delay ms={2000} />
-              <span id='hello'>HELLO</span>
+              <span id='hello' className='dark-red bold'>
+                HELLO
+              </span>
               <Typist.Delay ms={1500} />
-              <p id='yehor'>
-                <span id='im'>I'M </span>
+              <p id='yehor' className='gold bold'>
+                <span id='im' className='dark-purple'>
+                  I'M{' '}
+                </span>
                 YEHOR
               </p>
             </Typist>
@@ -85,7 +91,7 @@ export default class Header extends Component {
                 ) : (
                   ''
                 ),
-                <span id={word.id} className='action-words-carousel'>
+                <span id={word.id} className='blue'>
                   {word.text}
                 </span>,
                 <Typist.Backspace count={word.delete} delay={3000} />,
@@ -93,17 +99,25 @@ export default class Header extends Component {
             </Typist>
             <Typist cursor={noCursor}>
               <Typist.Delay ms={7000} />
-              <p id='webdev'>
-                {/* <span style={{ color: 'rgb(214, 135, 43)' }}>WEB </span> */}
+              <p id='webdev' className='dark-red'>
                 WEB DEVELOPER
               </p>
             </Typist>
 
             <div id='slide'>
-              <p id='where'> I STAND ON A SWEET SPOT WHERE</p>
-              <p id='creativity'>CREATIVITY</p>
-              <span id='and'>AND </span>
-              <span id='code'>CODE</span>
+              <p id='where' className='blue'>
+                {' '}
+                I STAND ON A SWEET SPOT WHERE
+              </p>
+              <p id='creativity' className='gold bold'>
+                CREATIVITY
+              </p>
+              <span id='and' className='dark-purple'>
+                AND{' '}
+              </span>
+              <span id='code' className='blue bold'>
+                CODE
+              </span>
               <div id='container'>
                 <p id='meet'>INTERSECT</p>
               </div>

@@ -31,7 +31,8 @@ header .banner {
 
 header .banner-text {
   width: 100%;
-  font: 80px/1.1em 'Proxima Nova', sans-serif;
+  font-size: 80px;
+  line-height: 1.1em;
   font-weight: 400;
   /* font: 80px/1.1em 'opensans-bold', sans-serif; */
   color: rgb(6, 255, 213);
@@ -42,45 +43,33 @@ header .banner-text {
 
 header .banner-text #hello {
   font-size: 160px;
-  font-weight: 600;
-  color: rgb(154, 27, 40);
 }
 
 header .banner-text #im {
   font-size: 97px;
   font-weight: 200;
   margin: 0 auto 0;
-  /* color: rgb(154, 27, 40); */
-  color: rgb(45, 45, 72);
 }
 header .banner-text #yehor {
   font-size: 97px;
   margin: 0 auto 0;
-  font-weight: 600;
-  color: rgb(214, 135, 43);
 }
-header .banner-text .action-words-carousel {
-  color: rgb(11, 72, 88);
-}
+
 header .banner-text #webdev {
   margin: -15px auto -10px;
   font-size: 75px;
   font-weight: 400;
-  color: rgb(154, 27, 40);
   letter-spacing: -7px;
 }
 header .banner-text #where {
   margin: -10px auto -30px;
   font-size: 30px;
   font-weight: 200;
-  color: rgb(45, 45, 72);
   letter-spacing: 0px;
 }
 header .banner-text #creativity {
   margin: -10px auto -10px;
   font-size: 90px;
-  font-weight: 600;
-  color: rgb(214, 135, 43);
   letter-spacing: -2px;
 }
 header .banner-text #and {
@@ -93,8 +82,6 @@ header .banner-text #and {
 header .banner-text #code {
   margin: -10px auto -10px;
   font-size: 90px;
-  font-weight: 600;
-  color: rgb(11, 72, 88);
   letter-spacing: 3px;
 }
 header .banner-text #meet {
@@ -244,8 +231,4 @@ header .social li i:hover {
   100% {
     opacity: 1;
   }
-}
-
-#resume {
-  color: white;
 }
