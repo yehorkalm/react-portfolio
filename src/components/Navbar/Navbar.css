@@ -31,6 +31,7 @@ ul#nav {
 
   /* center align the menu */
   text-align: center;
+  border-bottom: 3px solid rgb(214, 135, 43);
 }
 ul#nav .link {
   position: relative;

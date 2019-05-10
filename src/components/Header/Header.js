@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Particles from 'react-particles-js';
 import Typist from 'react-typist';
+import { Link } from 'react-scroll';
 
 import './Header.css';
 
@@ -43,21 +43,11 @@ export default class Header extends Component {
       { text: 'AN OPEN-MINDED', delete: 14, id: 'acOpen' },
       { text: 'A DATA-DRIVEN', delete: 13, id: 'acData' },
     ];
-    const particles = {
-      polygon: {
-        enable: true,
-        type: 'inside',
-        move: {
-          radius: 10,
-        },
-        url: '../../shared/laptop.svg',
-      },
-    };
+
     return (
       // <React.Fragment>
       <header id='home' style={{ minHeight: this.state.height }}>
-        <Particles params={particles} />
-        <div className='row banner'>
+        <div className='banner'>
           <div className='banner-text '>
             <Typist cursor={noCursor}>
               <Typist.Delay ms={2000} />
@@ -121,7 +111,23 @@ export default class Header extends Component {
               <div id='container'>
                 <p id='meet'>INTERSECT</p>
               </div>
+
+              <div className='flex-row-center'>
+                <div className='bg dark-red' />
+                <div className='button dark-red'>
+                  <Link
+                    to='skills'
+                    smooth='easeInOutQuart'
+                    offset={-70}
+                    duration={1200}
+                  >
+                    <i className='fa fa-chevron-down' />
+                  </Link>
+                </div>
+              </div>
+
               <br />
+
               <ul className='social'>
                 <li>
                   <a

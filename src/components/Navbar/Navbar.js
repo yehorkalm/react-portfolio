@@ -6,38 +6,6 @@ import InView from 'react-inview-monitor';
 import './Navbar.css';
 
 export default class Navbar extends Component {
-  // componentDidMount() {
-  //   // scrollSpy.update();
-
-  //   /*----------------------------------------------------*/
-  //   /*	Fade In/Out Primary Navigation
-  //   ------------------------------------------------------*/
-
-  //   window.addEventListener('scroll', () => {
-  //     const h = document.getElementById('home').offsetHeight;
-  //     const y = window.scrollY;
-  //     const nav = document.getElementById('nav-wrap');
-
-  //     if (y > h * 0.2 && y < h && window.outerWidth > 768) {
-  //       nav.classList.add('animated');
-  //       nav.classList.add('fadeOut');
-  //     } else {
-  //       if (y < h * 0.2) {
-  //         nav.classList.remove('opaque');
-  //         nav.classList.remove('fadeOut');
-  //         nav.classList.remove('animated');
-
-  //         // nav.removeClass('opaque').fadeIn('fast');
-  //       } else {
-  //         nav.classList.add('opaque');
-  //         nav.classList.remove('animated');
-  //         nav.classList.remove('fadeOut');
-  //         // nav.addClass('opaque').fadeIn('fast');
-  //       }
-  //     }
-  //   });
-  // }
-
   render() {
     return (
       <nav id='nav-wrap' className='nav-wrap'>

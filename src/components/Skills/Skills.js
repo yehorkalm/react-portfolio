@@ -6,6 +6,9 @@ import './Skills.css';
 import ProgressBar from './components/ProgressBar/ProgressBar';
 import FeatureTile from './components/FeatureTile/FeatureTile';
 
+import skills from '../../shared/js/skills';
+import tiles from '../../shared/js/tiles';
+
 export default class Skills extends Component {
   constructor() {
     super();
@@ -19,71 +22,18 @@ export default class Skills extends Component {
     /*	Make sure that component's minimum height is equal to the browser height.
     ------------------------------------------------------ */
     this.setState({
-      height: window.innerHeight,
+      height: window.innerHeight - 50,
     });
   }
 
   render() {
-    const skills = [
-      {
-        name: 'CSS',
-        value: '80%',
-      },
-      {
-        name: 'HTML',
-        value: '90%',
-      },
-      {
-        name: 'React.js',
-        value: '70%',
-      },
-      {
-        name: 'Angular',
-        value: '70%',
-      },
-      {
-        name: 'JavaScript',
-        value: '80%',
-      },
-      {
-        name: 'Node.js',
-        value: '80%',
-      },
-      {
-        name: 'somehting',
-        value: '80%',
-      },
-    ];
-
-    const tiles = [
-      {
-        id: 'col1row1',
-        icon: 'fas fa-tachometer-alt',
-        header: 'Fast',
-        text: 'Fast development times and bug free interaction.',
-      },
-      {
-        id: 'col2row1',
-        icon: 'fas fa-tablet-alt',
-        header: 'Responsive',
-        text: 'My layouts will work on any screen, big or small.',
-      },
-      {
-        id: 'col3row1',
-        icon: 'far fa-lightbulb',
-        header: 'Intuitive',
-        text: 'Easy to use, intuitive and simple UX/UI',
-      },
-      {
-        id: 'col4row1',
-        icon: 'fas fa-space-shuttle',
-        header: 'Dynamic',
-        text: 'I love making pages come to life.',
-      },
-    ];
-
     return (
-      <div style={{ minHeight: this.state.height, marginTop: '5vh' }}>
+      <div
+        style={{
+          minHeight: this.state.height,
+          marginTop: '5vh',
+        }}
+      >
         <div className='flex-column-center'>
           <InView
             classNameNotInView='hidden'
@@ -128,11 +78,21 @@ export default class Skills extends Component {
                   id='yehorPic'
                   style={{ marginTop: '7px' }}
                 />
-                <h5>Who is this guy?</h5>
-                <p>I'm the Front-End Developer in Toronto, CA.</p>
+                <p
+                  className='label dark-purple-70 bold'
+                  style={{ marginBottom: '-2px' }}
+                >
+                  Who is this guy?
+                </p>
+                <p className='text dark-purple-70'>
+                  I am a results-oriented coder with a passion for good code, UI
+                  effects, animations and creating intuitive, dynamic user
+                  experiences.
+                </p>
               </div>
             </InView>
           </div>
+
           <div id='col2row2'>
             <InView
               classNameNotInView='hidden'

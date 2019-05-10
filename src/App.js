@@ -42,7 +42,6 @@ class App extends Component {
         <Element name='skills'>
           <Skills />
         </Element>
-        <Skills />
 
         {/* <About />
         <Portfolio />

@@ -1,25 +1,17 @@
 header {
-  position: relative;
+  /* position: relative; */
   /* height: 850px; */
   /* min-height: 850px; */
   width: 100%;
   /* background: #161415 url('../../shared/img/header-background.jpeg') no-repeat
     top center; */
   /* background: linear-gradient(to right, rgb(246, 246, 248), rgb(227, 227, 227)); */
-  /* background: rgb(214, 215, 212); */
-  background-size: cover !important;
-  -webkit-background-size: cover !important;
-  text-align: center;
-  overflow: hidden;
+  /* background-size: cover !important; */
+  /* -webkit-background-size: cover !important; */
+  /* text-align: center; */
+  /* overflow: hidden; */
 }
 
-/* vertically center banner section */
-header:before {
-  content: '';
-  display: inline-block;
-  vertical-align: middle;
-  height: 100%;
-}
 header .banner {
   display: inline-block;
   /* vertical-align: middle; */
@@ -35,7 +27,6 @@ header .banner-text {
   line-height: 1.1em;
   font-weight: 400;
   /* font: 80px/1.1em 'opensans-bold', sans-serif; */
-  color: rgb(6, 255, 213);
   /* text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.8); */
   letter-spacing: 2px;
   margin: 15vh auto 0;
@@ -230,5 +221,53 @@ header .social li i:hover {
   }
   100% {
     opacity: 1;
+  }
+}
+
+/* //BUTTON LEARN MORE */
+
+.bg,
+.button {
+  margin-top: 10px;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+
+.bg {
+  animation: pulse 1.2s ease infinite;
+  background: rgba(197, 54, 68, 0.507);
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 99;
+  border: none;
+  background: rgb(154, 27, 40);
+  background-size: 18px;
+  cursor: pointer;
+  outline: none;
+}
+
+.button a {
+  position: absolute;
+  color: #fff;
+  font-size: 17px;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
   }
 }
