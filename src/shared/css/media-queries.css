@@ -312,12 +312,22 @@
     letter-spacing: 3px;
   }
 
+  .bg,
+  .button {
+    margin-top: 70px;
+  }
+
   /* header social links */
   header .social {
-    margin-top: -60px;
+    margin-top: -10px;
     font-size: 20px;
   }
   header .social li {
     margin: 0 10px;
+  }
+
+  .skill-caption-inner {
+    font-size: 12px;
+    letter-spacing: -0.5px;
   }
 }
