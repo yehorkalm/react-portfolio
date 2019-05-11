@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "6e8f13b42be847a6fd9a",
-    "url": "/static/css/main.46d76ccc.chunk.css"
+    "revision": "6eeb2308cafc06625a5a",
+    "url": "/static/css/main.d1b8987c.chunk.css"
   },
   {
-    "revision": "6e8f13b42be847a6fd9a",
+    "revision": "6eeb2308cafc06625a5a",
     "url": "/static/js/main.83e0dafb.chunk.js"
   },
   {
@@ -24,19 +24,19 @@ self.__precacheManifest = [
     "url": "/static/media/ProximaNovaBold.18760833.otf"
   },
   {
-    "revision": "0ac90346fe61c096b4466a3d94ee137d",
-    "url": "/static/media/ProximaNovaLight.0ac90346.otf"
+    "revision": "9a0d4bb8c150600c5c0566cff3f0b41a",
+    "url": "/static/media/ProximaNovaBlack.9a0d4bb8.otf"
   },
   {
     "revision": "f44790079cc3eed0ffcf7ca4eca19267",
     "url": "/static/media/ProximaNovaReg.f4479007.otf"
   },
   {
-    "revision": "9a0d4bb8c150600c5c0566cff3f0b41a",
-    "url": "/static/media/ProximaNovaBlack.9a0d4bb8.otf"
+    "revision": "0ac90346fe61c096b4466a3d94ee137d",
+    "url": "/static/media/ProximaNovaLight.0ac90346.otf"
   },
   {
-    "revision": "130407a5bb2cca4e5497d59f6942d32b",
+    "revision": "f0981d9695bc3a9a313e455e3e9890fa",
     "url": "/index.html"
   }
 ];
