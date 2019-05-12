@@ -4,8 +4,8 @@
 
 body {
   font-family: 'Proxima Nova', sans-serif;
-  /* background: black; */
   background: rgb(214, 215, 212);
+  /* #D6D7D4 */
 }
 .noscroll {
   overflow: hidden;
@@ -57,9 +57,12 @@ body {
 
 .blue {
   color: rgb(11, 72, 88);
+  /* #0B4858 */
 }
 .gold {
+  /* color: rgb(218, 132, 34); */
   color: rgb(214, 135, 43);
+  /* #D6872B */
 }
 .dark-red {
   color: rgb(154, 27, 40);

@@ -38,7 +38,6 @@ class App extends Component {
           <Header ref={this.headerRef} onNav={this.onNavigation} />
         </Element>
         <Navbar />
-
         <Element name='skills'>
           <Skills />
         </Element>

@@ -31,10 +31,10 @@ export default class Skills extends Component {
       <div
         style={{
           minHeight: this.state.height,
-          marginTop: '5vh',
+          paddingTop: '5vh',
         }}
       >
-        <div className='flex-column-center'>
+        <div className='flex-column-center' style={{}}>
           <InView
             classNameNotInView='hidden'
             classNameInView='animated fadeInLeftBig'
@@ -85,9 +85,9 @@ export default class Skills extends Component {
                   Who is this guy?
                 </p>
                 <p className='text dark-purple-70'>
-                  I am a results-oriented coder with a passion for good code, UI
-                  effects, animations and creating intuitive, dynamic user
-                  experiences.
+                  I am a results-oriented programmer with a passion for good
+                  code, UI effects, animations and creating intuitive, dynamic
+                  user experiences.
                 </p>
               </div>
             </InView>
