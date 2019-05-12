@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Element } from 'react-scroll';
 
+import Particles from 'react-particles-js';
+import particles from './shared/js/particles';
+
 import Navbar from './components/Navbar/Navbar';
 import Header from './components/Header/Header';
 import Skills from './components/Skills/Skills';
@@ -34,6 +37,7 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
+        <Particles params={particles} className='particles' />
         <Element name='home'>
           <Header ref={this.headerRef} onNav={this.onNavigation} />
         </Element>

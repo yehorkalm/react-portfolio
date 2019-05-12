@@ -161,6 +161,8 @@ header .social li i:hover {
 
 .Typist {
   display: inline;
+  position: relative;
+  z-index: 2;
 }
 
 .Typist .Cursor {
@@ -206,7 +208,6 @@ header .social li i:hover {
   justify-content: center;
   align-items: center;
   position: absolute;
-  z-index: 99;
   border: none;
   background: rgb(154, 27, 40);
   background-size: 18px;
