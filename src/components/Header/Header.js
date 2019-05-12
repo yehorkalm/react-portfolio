@@ -8,9 +8,6 @@ export default class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      typistIndex: 0,
-      firstShowDelay: 6000,
-      firstShowOffset: 1,
       height: '',
     };
   }
@@ -19,7 +16,7 @@ export default class Header extends Component {
     /*	Make sure that component's minimum height is equal to the browser height.
     ------------------------------------------------------ */
     this.setState({
-      height: window.innerHeight,
+      height: window.innerHeight > 900 ? window.innerHeight : 900,
     });
   }
 
