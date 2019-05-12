@@ -1,23 +1,27 @@
 self.__precacheManifest = [
   {
-    "revision": "6eeb2308cafc06625a5a",
-    "url": "/static/css/main.d1b8987c.chunk.css"
+    "revision": "e94fd98a7c952fd8a643",
+    "url": "/static/css/main.1e0682f2.chunk.css"
   },
   {
-    "revision": "6eeb2308cafc06625a5a",
-    "url": "/static/js/main.83e0dafb.chunk.js"
+    "revision": "e94fd98a7c952fd8a643",
+    "url": "/static/js/main.7ee8900f.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
     "url": "/static/js/runtime~main.a8a9905a.js"
   },
   {
-    "revision": "7e8e4b8b343c95d9ec26",
-    "url": "/static/js/2.39effbe7.chunk.js"
+    "revision": "45858de9b9b9ca319715",
+    "url": "/static/js/2.7fdb2981.chunk.js"
   },
   {
     "revision": "227144ad398ca5af20aec48027b9b28d",
     "url": "/static/media/yehor.227144ad.png"
+  },
+  {
+    "revision": "18ac7cdfd05eb863d677f9258e1291cf",
+    "url": "/static/media/trianglify.18ac7cdf.svg"
   },
   {
     "revision": "187608336918c9f3d2d2fd47c86ea4d7",
@@ -36,7 +40,7 @@ self.__precacheManifest = [
     "url": "/static/media/ProximaNovaLight.0ac90346.otf"
   },
   {
-    "revision": "f0981d9695bc3a9a313e455e3e9890fa",
+    "revision": "0d7199dea4e1b072178a214a0e598411",
     "url": "/index.html"
   }
 ];
