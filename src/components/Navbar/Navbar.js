@@ -41,18 +41,18 @@ export default class Navbar extends Component {
           </Link>
           <Link
             activeClass='current'
-            to='about'
+            to='portfolio'
             spy={true}
             smooth={true}
             offset={-70}
             duration={500}
             className='link'
           >
-            <span>Works</span>
+            <span>Portfolio</span>
           </Link>
           <Link
             activeClass='current'
-            to='works'
+            to='about'
             spy={true}
             smooth={true}
             offset={-70}

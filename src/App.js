@@ -2,17 +2,12 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Element } from 'react-scroll';
 
-import Particles from 'react-particles-js';
-import particles from './shared/js/particles';
-
 import Navbar from './components/Navbar/Navbar';
 import Header from './components/Header/Header';
 import Skills from './components/Skills/Skills';
+import Portfolio from './components/Portfolio/Portfolio';
 // import About from './components/About/About';
-// import Portfolio from './components/Portfolio/Portfolio';
-// import Testimonials from './components/Testimonials/Testimonials';
 // import ContactUs from './components/Contact/Contact';
-// import Footer from './components/Footer/Footer';
 
 import './App.css';
 import './shared/css/media-queries.css';
@@ -37,17 +32,21 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        <Particles params={particles} className='particles' />
         <Element name='home'>
           <Header ref={this.headerRef} onNav={this.onNavigation} />
         </Element>
+
         <Navbar />
+
         <Element name='skills'>
           <Skills />
         </Element>
 
+        <Element name='portfolio'>
+          <Portfolio />
+        </Element>
+
         {/* <About />
-        <Portfolio />
         <Testimonials />
         <ContactUs />
         <Footer /> */}

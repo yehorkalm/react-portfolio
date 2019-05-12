@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import Typist from 'react-typist';
 import { Link } from 'react-scroll';
 
+import Particles from 'react-particles-js';
+import particles from '../../shared/js/particles';
+
 import './Header.css';
 
 export default class Header extends Component {
@@ -15,9 +18,23 @@ export default class Header extends Component {
     /*----------------------------------------------------*/
     /*	Make sure that component's minimum height is equal to the browser height.
     ------------------------------------------------------ */
-    this.setState({
-      height: window.innerHeight > 900 ? window.innerHeight : 900,
-    });
+    this.setState(
+      {
+        // height: window.innerHeight > 844 ? window.innerHeight : 844,
+        height: (() => {
+          if (window.innerWidth < 400) {
+            return 700;
+          } else if (window.innerWidth > 400 && window.innerWidth < 767) {
+            return 910;
+          } else {
+            return 1000;
+          }
+        })(),
+      },
+      () => {
+        console.log(this.state.height);
+      }
+    );
   }
 
   render() {
@@ -43,6 +60,11 @@ export default class Header extends Component {
 
     return (
       <React.Fragment>
+        <Particles
+          params={particles}
+          className='particles'
+          style={{ minHeight: this.state.height }}
+        />
         <header id='home' style={{ minHeight: this.state.height }}>
           <div className='banner'>
             <div className='banner-text'>

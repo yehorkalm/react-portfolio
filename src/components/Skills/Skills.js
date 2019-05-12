@@ -39,7 +39,7 @@ export default class Skills extends Component {
             classNameNotInView='hidden'
             classNameInView='animated fadeInLeftBig'
           >
-            <div className='bold header'>ABOUT</div>
+            <div className='bold header'>SKILLS</div>
           </InView>
 
           <InView
