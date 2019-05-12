@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "e94fd98a7c952fd8a643",
+    "revision": "e44432e011e6662eda47",
     "url": "/static/css/main.1e0682f2.chunk.css"
   },
   {
-    "revision": "e94fd98a7c952fd8a643",
-    "url": "/static/js/main.7ee8900f.chunk.js"
+    "revision": "e44432e011e6662eda47",
+    "url": "/static/js/main.068c18e9.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -28,10 +28,6 @@ self.__precacheManifest = [
     "url": "/static/media/ProximaNovaBold.18760833.otf"
   },
   {
-    "revision": "9a0d4bb8c150600c5c0566cff3f0b41a",
-    "url": "/static/media/ProximaNovaBlack.9a0d4bb8.otf"
-  },
-  {
     "revision": "f44790079cc3eed0ffcf7ca4eca19267",
     "url": "/static/media/ProximaNovaReg.f4479007.otf"
   },
@@ -40,7 +36,11 @@ self.__precacheManifest = [
     "url": "/static/media/ProximaNovaLight.0ac90346.otf"
   },
   {
-    "revision": "0d7199dea4e1b072178a214a0e598411",
+    "revision": "9a0d4bb8c150600c5c0566cff3f0b41a",
+    "url": "/static/media/ProximaNovaBlack.9a0d4bb8.otf"
+  },
+  {
+    "revision": "90b3ad4a4540bbaaebf41d8c2053af23",
     "url": "/index.html"
   }
 ];
