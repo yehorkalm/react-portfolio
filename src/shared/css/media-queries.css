@@ -8,6 +8,18 @@
 /* screenwidth less than 900px
 --------------------------------------------------------------------- */
 @media only screen and (max-width: 960px) {
+  .modal-overlay {
+    top: -5%;
+    left: -5%;
+    /* right: 10vw; */
+    /* bottom: 10vh; */
+    width: 110%;
+    height: 110%;
+  }
+
+  li.projectTile {
+    width: 95%;
+  }
   /* header styles
    ------------------------------------------------------------------ */
   header .banner-text {

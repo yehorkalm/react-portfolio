@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 
 import Modal from 'react-modal';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { Carousel } from 'react-responsive-carousel';
 
 import './ProjectTile.css';
 
-Modal.setAppElement(this);
+// Modal.setAppElement(this);
 
 class ProjectTile extends Component {
   constructor(props) {
@@ -45,6 +47,20 @@ class ProjectTile extends Component {
             contentLabel='onRequestClose Example'
             onRequestClose={this.onModalClose}
           >
+            <Carousel
+              showIndicators={false}
+              showThumbs={false}
+              infiniteLoop={true}
+            >
+              {modal.images.map((image, index) => {
+                return (
+                  <div key={index}>
+                    <img src={image} alt='' />
+                  </div>
+                );
+              })}
+            </Carousel>
+
             <h1>{modal.header}</h1>
             <p>{modal.text}</p>
             <button onClick={this.onModalClose}>Close Modal</button>

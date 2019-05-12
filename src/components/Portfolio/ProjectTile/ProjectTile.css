@@ -305,3 +305,19 @@ li.projectTile .normal {
   width: 50vw;
   height: 70vh;
 }
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transform: scale(0.3);
+  transition: 500ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+  transform: scale(0.3);
+}

@@ -14,6 +14,53 @@ const projects = [
       header: 'Web Application for The Sprinkler Company Inc.',
       text:
         'Desktop application is keeping track of clients, workers and orders. User has the ability to add/modify/delete clients and workers as well as create new orders for workers to complete',
+      images: [
+        'https://i.ibb.co/XpS9gD9/sprinkler7.png',
+        'https://i.ibb.co/gRsrTYg/sprinkler6.png',
+        'https://i.ibb.co/k17j9FK/sprinkler4.png',
+        'https://i.ibb.co/TqSMWqD/sprinkler5.png',
+        'https://i.ibb.co/1Z85YHX/sprinkler3.png',
+        'https://i.ibb.co/nDxk04b/sprinkler2.png',
+        'https://i.ibb.co/grPp3KT/sprinkler1.png',
+      ],
+    },
+  },
+  {
+    header: 'The Sprinkler Company',
+    text: 'Desktop application is keeping track of clients, workers and orders',
+    imgClass: 'sprinkler',
+    modal: {
+      header: 'Web Application for The Sprinkler Company Inc.',
+      text:
+        'Desktop application is keeping track of clients, workers and orders. User has the ability to add/modify/delete clients and workers as well as create new orders for workers to complete',
+      images: [
+        'https://i.ibb.co/XpS9gD9/sprinkler7.png',
+        'https://i.ibb.co/gRsrTYg/sprinkler6.png',
+        'https://i.ibb.co/k17j9FK/sprinkler4.png',
+        'https://i.ibb.co/TqSMWqD/sprinkler5.png',
+        'https://i.ibb.co/1Z85YHX/sprinkler3.png',
+        'https://i.ibb.co/nDxk04b/sprinkler2.png',
+        'https://i.ibb.co/grPp3KT/sprinkler1.png',
+      ],
+    },
+  },
+  {
+    header: 'The Sprinkler Company',
+    text: 'Desktop application is keeping track of clients, workers and orders',
+    imgClass: 'sprinkler',
+    modal: {
+      header: 'Web Application for The Sprinkler Company Inc.',
+      text:
+        'Desktop application is keeping track of clients, workers and orders. User has the ability to add/modify/delete clients and workers as well as create new orders for workers to complete',
+      images: [
+        'https://i.ibb.co/XpS9gD9/sprinkler7.png',
+        'https://i.ibb.co/gRsrTYg/sprinkler6.png',
+        'https://i.ibb.co/k17j9FK/sprinkler4.png',
+        'https://i.ibb.co/TqSMWqD/sprinkler5.png',
+        'https://i.ibb.co/1Z85YHX/sprinkler3.png',
+        'https://i.ibb.co/nDxk04b/sprinkler2.png',
+        'https://i.ibb.co/grPp3KT/sprinkler1.png',
+      ],
     },
   },
 ];
@@ -79,19 +126,19 @@ export default class Portfolio extends Component {
         </div>
 
         <div className='flex-row-center'>
-          <ul>
-            {projects.map((project, index) => {
-              return (
-                <ProjectTile
-                  descHeader={project.header}
-                  descText={project.text}
-                  imgClass={project.imgClass}
-                  key={index}
-                  modal={project.modal}
-                />
-              );
-            })}
-          </ul>
+          {/* <ul> */}
+          {projects.map((project, index) => {
+            return (
+              <ProjectTile
+                descHeader={project.header}
+                descText={project.text}
+                imgClass={project.imgClass}
+                key={index}
+                modal={project.modal}
+              />
+            );
+          })}
+          {/* </ul> */}
         </div>
       </React.Fragment>
     );
