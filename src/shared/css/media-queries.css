@@ -9,17 +9,14 @@
 --------------------------------------------------------------------- */
 @media only screen and (max-width: 960px) {
   .modal-overlay {
-    top: -5%;
-    left: -5%;
+    top: 10vh;
+    left: 5vw;
     /* right: 10vw; */
     /* bottom: 10vh; */
-    width: 110%;
-    height: 110%;
+    width: 90vw;
+    height: 80vh;
   }
 
-  li.projectTile {
-    width: 95%;
-  }
   /* header styles
    ------------------------------------------------------------------ */
   header .banner-text {
@@ -181,6 +178,25 @@
   -------------------------------------------------------------------------- */
 
 @media only screen and (max-width: 480px) {
+  .flex-rowBig-columnSmall-center {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modal-overlay {
+    top: -5%;
+    left: -5%;
+    /* right: 10vw; */
+    /* bottom: 10vh; */
+    width: 110%;
+    height: 110%;
+  }
+
+  li.projectTile {
+    width: 95%;
+    height: 200px;
+  }
+
   /* mobile navigation
    -------------------------------------------------------------------- */
   #nav-wrap {
